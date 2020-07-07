@@ -1,0 +1,21 @@
+extraction: 
+  # Define settings for C/C++ analysis
+  #####################################
+  cpp:
+    # The `prepare` step exists for customization on LGTM.com only.
+    prepare:
+    #   # The `packages` section is valid for LGTM.com only. It names Ubuntu packages to
+    #   # be installed.
+      packages:
+        - libgtk2.0-dev
+        - libglib2.0-dev
+      #  - build-essential
+      #  - automake
+        - pkg-config
+        - libgpgme-dev
+    index:
+      # Override the autobuild process by specifying a list of custom build commands
+      # to use instead. 
+      build_command:
+        - make
+
